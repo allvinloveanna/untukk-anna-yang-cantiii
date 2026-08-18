@@ -1,0 +1,82 @@
+index.html<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>untuk anna tercantii di dunia 🤍</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'segoe ui',sans-serif;}
+        body{min-height:100vh;background:linear-gradient(135deg,#f5f7fa 0%,#ffffff 100%);display:flex;flex-direction:column;align-items:center;padding:20px;position:relative;overflow-x:hidden;}
+        
+        /* hati putih jatuh */
+        .hearts{position:fixed;width:100%;height:100%;top:0;left:0;pointer-events:none;z-index:1;}
+        .heart{position:absolute;font-size:22px;color:#ffffff;filter:drop-shadow(0 0 4px #ddd);animation:float 7s ease-in-out infinite;opacity:0.85;}
+        @keyframes float{0%{transform:translateY(-50px) rotate(0deg);opacity:0;}10%{opacity:0.9;}90%{opacity:0.9;}100%{transform:translateY(100vh) rotate(360deg);opacity:0;}}
+        
+        /* kontainer */
+        .container{background:#fff;border-radius:24px;box-shadow:0 12px 45px rgba(200,200,200,0.2);max-width:420px;width:100%;padding:35px 25px;text-align:center;position:relative;z-index:2;margin-top:30px;border:1px solid #f0f0f0;}
+        
+        .big-heart{font-size:70px;color:#f0f0f0;text-shadow:0 0 10px #d0d0d0;animation:pulse 1.2s ease-in-out infinite;margin:10px 0 20px;}
+        @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.15);}}
+        
+        h1{color:#888;font-size:24px;margin-bottom:10px;font-weight:600;line-height:1.4;}
+        
+        /* foto */
+        .foto-kita{margin:25px 0;}
+        .foto-kita img{width:100%;max-width:300px;border-radius:16px;box-shadow:0 4px 15px rgba(0,0,0,0.08);}
+        
+        /* pesan romantis */
+        .pesan{background:#f9f9f9;padding:25px 20px;border-radius:18px;margin:25px 0;line-height:1.9;color:#555;font-size:16px;border-left:4px solid #e0e0e0;text-align:left;}
+        
+        .penutup{margin-top:20px;font-size:15px;color:#aaa;font-style:italic;}
+    </style>
+</head>
+<body>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container">
+    <div class="big-heart">🤍</div>
+    <h1>untuk anna tercantii di dunia 🤍</h1>
+
+    <!-- 📸 FOTO — GANTI LINK DI BAWAH SINI -->
+    <div class="foto-kita">
+        <img src="https://i.imgur.com/abcdefg.jpg" alt="kita berdua 🤍">
+    </div>
+
+    <div class="pesan">
+sejak awal kita ketemu, aku merasa kamu hanya sekedar orang yang mudah di lupakan, namun makin lama perasaan ini semakin meledak ledak, sungguh aku sangat mencintaimu dari sekedar yang kamu tau. 🤍
+<br><br>
+setiap detik yang berlalu, aku semakin sadar bahwa kamu bukan sekadar orang yang lewat di hidupku. kamu adalah rumah tempat hatiku pulang, tempat segala rasa rindu dan cinta menemukan tempatnya.
+<br><br>
+tak ada hari tanpa memikirkanmu, tak ada malam tanpa berdoa untukmu. kamu hadir mengubah semua hal biasa menjadi hal yang indah, seakan dunia ini diciptakan hanya untuk kita berdua.
+<br><br>
+maaf jika kadang aku tak bisa mengungkapkan semuanya dengan kata-kata. tapi percayalah, rasa ini tumbuh setiap waktu, makin dalam, makin tulus, dan makin tak tergantikan. kamu adalah hal terindah yang pernah dikirimkan tuhan untukku.
+<br><br>
+aku ingin tetap ada di sampingmu, menemani setiap langkahmu, melihatmu tersenyum, dan menjagamu sebisaku. karena bagiku, bahagia itu sederhana: cukup melihatmu baik-baik saja, dan tetap menjadi milikku.
+<br><br>
+terima kasih telah ada, terima kasih telah menjadi dirimu. aku mencintaimu, bukan hanya untuk hari ini, tapi untuk setiap hari yang akan kita lalui bersama. selamanya dan hanya kamu, anna 🤍
+<br><br>
+<p style="text-align:right; font-weight:600; color:#888;">— dengan seluruh cinta, untukmu 🤍</p>
+    </div>
+
+    <div class="penutup">🤍 semoga suka ya, sayangku 🤍</div>
+</div>
+
+<script>
+    // hati putih jatuh otomatis
+    const heartsContainer = document.getElementById('hearts');
+    function createHeart(){
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.innerText = '🤍';
+        heart.style.left = Math.random()*100 + '%';
+        heart.style.animationDuration = (Math.random()*4+5)+'s';
+        heartsContainer.appendChild(heart);
+        setTimeout(()=>heart.remove(),9000);
+    }
+    setInterval(createHeart,600);
+</script>
+
+</body>
+</html>
